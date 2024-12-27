@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --text-dark: #020617;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  position: relative;
+  isolation: isolate;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  max-width: 400px;
+  color: #8FCBDA;
+}
+
+.section__header::before {
+  position: absolute;
+  top: -3rem;
+  width: max-content;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6rem;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h4{
+  font-size: 15px;
+}
+
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
+}
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    margin-left: 85px;
+  
+}
+.container .card .face.face1{
+position: relative;
+background: #8FCBDA;
+  /* border: 1px solid #bebebe; */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+transform: translateY(100px);
+
+
+}
+
+.container .card:hover .face.face1{
+    background: #8FCBDA;
+    transform: translateY(0);
+}
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color:  #1c1c1c;
+    text-align: center;
+    font-size: 15px;
+}
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+.container .card .face.face2 .content p{
+margin: 0;
+padding: 0;
+
+}
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #8FCBDA;
+}
+.container .card .face.face2 .content a:hover{
+    background: #8FCBDA;
+    color: #fff;
+}
+
+.container .card:hover .face.face1{
+    background: #D4B2D4;
+    transform: translateY(0);
+}
+
+.text{
+    text-align: center;
+    left: 50%;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #F6CA62; /* لون النص الافتراضي */
+    transition: color 0.3s; /* تأثير التحويل بزمن 0.3 ثانية */
+    margin-top: 0;
+    margin-bottom: 20px;
+
+  }
+
+
+
+.text:hover {
+    color: #D4B2D4; /* تغيير لون النص عند hover */
+}
+
+.Buzzworthy {
+  overflow: hidden;
+}
+
+.Buzzworthy__Blogs .section__header::before {
+  content: "Buzzworthy Blogs";
+}
+
+.Buzzworthy__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.Buzzworthy__card {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.Buzzworthy__card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Buzzworthy__card div {
+  flex: 1;
+}
+
+.Buzzworthy__card h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.Buzzworthy__card span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+
+.Buzzworthy__card p {
+  color: var(--text-light);
+}
+
+/* استخدام @media لضبط تنسيقات الشاشة الصغيرة */
+@media screen and (max-width: 767px) {
+  .section__container {
+    padding: 3rem 0.5rem;
+  }
+
+  .section__header {
+    font-size: 1.5rem;
+    max-width: 100%;
+  }
+
+  .container .card .face {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Buzzworthy__grid {
+    margin-top: 2rem;
+    gap: 0.5rem;
+  }
+
+  .nav {
+    padding: 1rem 0.5rem;
+  }
+
+  .nav__logo img {
+    max-width: 150px;
+  }
+
+  .text {
+    font-size: 18px;
+    
+  }
+  h4{
+    font-size: 20px;
+
+  }
+
+  a{
+    font-size: 10px;
+  }
+
+  .Buzzworthy__Blogs .section__header::before {
+    content: "Buzzworthy Blogs";
+    font-size: 50px;
+  }
+}
+
+nav {
+    position: static;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav__header {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__logo img {
+    max-width: 200px;
+  }
+
+  .nav__logo .logo-dark {
+    display: flex;
+  }
+
+  .nav__logo .logo-white {
+    display: none;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    width: fit-content;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none !important;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .nav__links li:last-child {
+    display: none;
+  }
+
+  .nav__btns {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+/* img{
+  margin-top: 5%;
+} */

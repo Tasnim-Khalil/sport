@@ -1,0 +1,185 @@
+
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  position: relative;
+  isolation: isolate;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  max-width: 400px;
+}
+
+.section__header::before {
+  position: absolute;
+  top: -3rem;
+  width: max-content;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6rem;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--text-dark);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  
+}
+
+ul {
+  list-style: none;
+  
+}
+
+
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.footer {
+  background-color:#68507B;
+  
+}
+
+.footer__col {
+  display: flex;
+  justify-content: space-between;
+color: white;
+}
+
+.footer__section {
+  width: 45%; /* توزيع العناصر بالتساوي في العرض */
+  /* margin-bottom: 30px; */
+  color: white;
+  text-align: center;
+  display: block; /* عرض العنصر كبلوك لكي يظهر في سطر جديد */
+    margin-bottom: 12px; /* تباعد بين العناصر */
+    font-size: 13px;
+}
+
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.footer__logo img {
+  margin-bottom: 2rem;
+  max-width: 250px;
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F6CA62;
+}
+
+.footer__links {
+  display: grid;
+  gap: 1rem;
+
+}
+
+.footer__links :is(li, a) {
+  color: var(--white);
+  
+}
+
+.footer__links a:hover {
+  color: var(--white);
+}
+
+.footer__links a span {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color:#F6CA62;
+  text-align: center;
+  border-top: 1px solid var(--white);
+}
+
+@media (width > 540px) {
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
+
+
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+.footer__links li {
+    display: flex; /* جعل العناصر تظهر بجانب بعضها بشكل أفقي */
+    align-items: center; /* توسيط العناصر عموديًا */
+
+  }
+
+.icon {
+    margin-right: 10%; /* تحديد المسافة بين الصور */
+    margin-left: 5px; /* زاوية الصور إلى اليسار */
+    /* display: inline; */
+  width: 30px;
+
+
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer__container {
+      grid-template-columns: 1fr; /* تحديد عامود واحد للعناصر عندما تكون الشاشة صغيرة */
+    }
+    
+    .footer__section {
+      width: auto; /* جعل عرض العنصر يعتمد على المحتوى */
+      margin-bottom: 1rem; /* تقليل المسافة بين العناصر */
+      font-size: 14px; /* تصغير حجم الخط لتناسب الشاشات الصغيرة */
+    }
+  
+    .footer__col {
+      flex-direction: column; /* تحويل اتجاه العناصر ليكون عموديًا */
+      align-items: center; /* توسيط العناصر عموديًا */
+      gap: 1rem; /* تباعد بين العناصر */
+    }
+  }
+  

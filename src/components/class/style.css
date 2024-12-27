@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --text-dark: #020617;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  position: relative;
+  isolation: isolate;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  max-width: 400px;
+}
+
+.section__header::before {
+  position: absolute;
+  top: -3rem;
+  width: max-content;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6rem;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+
+.popular {
+  overflow: hidden;
+}
+
+.popular__container .section__header::before {
+  content: "Popular Classes";
+}
+
+.popular__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.popular__card {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.popular__card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popular__card div {
+  flex: 1;
+}
+
+.popular__card h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.popular__card span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.popular__card:hover span {
+  transform: translateX(10px);
+}
+
+.popular__card p {
+  color: var(--text-light);
+}
+
+
+@media (width > 540px) {
+
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+}
+
+  /* .header__container :is(h1, h2, p, .header__btn) {
+    text-align: left;
+  } */
+
+
+  .popular__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+
+@media (width > 1024px) {
+
+  .popular__card {
+    padding: 1.5rem;
+  }
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* توزيع العناصر على 3 أعمدة */
+  gap: 5px; /* تعديل المسافة بين العناصر */
+}
+
+.box {
+  background-color: #B3A3BA;
+  min-height: 80px; /* ارتفاع البوكس */
+  max-width: 60%; /* عرض البوكس */
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+.box {
+  padding: 20px;
+  border: 1px solid #68507B;
+  border-radius: 5px;
+}
+nav {
+  position: static;
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__header {
+  flex: 1;
+  padding: 0;
+  background-color: transparent;
+}
+
+.nav__logo img {
+  max-width: 200px;
+}
+
+.nav__logo .logo-dark {
+  display: flex;
+}
+
+.nav__logo .logo-white {
+  display: none;
+}
+
+.nav__menu__btn {
+  display: none;
+}
+
+.nav__links {
+  position: static;
+  width: fit-content;
+  padding: 0;
+  flex-direction: row;
+  background-color: transparent;
+  transform: none !important;
+  text-decoration: none;
+}
+
+.nav__links a {
+  color: var(--text-dark);
+}
+
+.nav__links li:last-child {
+  display: none;
+}
+
+.nav__btns {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu__btn {
+    display: block; /* عرض زر القائمة عندما تكون الشاشة صغيرة */
+  }
+
+  .nav__logo .logo-dark {
+    display: none; /* إخفاء الشعار الداكن عندما تكون الشاشة صغيرة */
+  }
+
+  .nav__logo .logo-white {
+    display: flex; /* عرض الشعار الأبيض عندما تكون الشاشة صغيرة */
+  }
+
+  .nav__links {
+    display: none; /* إخفاء الروابط عندما تكون الشاشة صغيرة */
+  }
+
+  .nav__links li:last-child {
+    display: block; /* عرض زر الخروج عندما تكون الشاشة صغيرة */
+  }
+
+  .nav__btns {
+    justify-content: center; /* توسيط الأزرار عندما تكون الشاشة صغيرة */
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* توزيع العناصر على عمود واحد فقط عندما تكون الشاشة صغيرة */
+    gap: 10px; /* تعديل المسافة بين العناصر */
+  }
+
+  .box {
+    max-width: 100%; /* جعل عرض البوكس يحتل العرض الكامل للشاشة الصغيرة */
+    margin-left: 0; /* إلغاء التباعد من اليسار */
+  }
+
+  nav {
+    padding: 1rem 0; /* تقليل التباعد في القائمة العلوية */
+  }
+
+  .popular__container .section__header::before {
+    content: "Popular Classes";
+    font-size: 50px;
+  }
+  
+.section__header {
+  font-size: 20%;
+}
+
+
+}

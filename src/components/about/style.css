@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #42c8c9;
+  --secondary-color: #d6abd8;
+  --text-dark: #020617;
+  --text-light: #94a3b8;
+  --extra-light: #e2e8f0;
+  --white: #ffffff;
+  --gradient-1: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4);
+  --gradient-2: linear-gradient(to right, #eeb5c4, #beb0e1, #7ed6d8);
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  position: relative;
+  isolation: isolate;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  max-width: 400px;
+}
+
+.section__header::before {
+  position: absolute;
+  top: -3rem;
+  width: max-content;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6rem;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: #CACACC;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+nav {
+  position: static;
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__header {
+  flex: 1;
+  padding: 0;
+  background-color: transparent;
+}
+
+.nav__logo img {
+  max-width: 200px;
+}
+
+.nav__logo .logo-dark {
+  display: flex;
+}
+
+.nav__logo .logo-white {
+  display: none;
+}
+
+.nav__menu__btn {
+  display: none;
+}
+
+.nav__links {
+  position: static;
+  width: fit-content;
+  padding: 0;
+  flex-direction: row;
+  background-color: transparent;
+  transform: none !important;
+  text-decoration: none;
+}
+
+.nav__links a {
+  color: var(--text-dark);
+}
+
+.nav__links li:last-child {
+  display: none;
+}
+
+.nav__btns {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+
+
+.about {
+  overflow: hidden;
+}
+
+.about__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__image {
+  position: relative;
+  isolation: isolate;
+}
+
+.about__image::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-75%, -50%);
+  width: calc(100% - 5rem);
+  aspect-ratio: 1;
+  background-image: var(--gradient-2);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.about__image img {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.about__content .section__header::before {
+  content: "About Us";
+}
+
+.about__content p {
+  margin-top: 1rem;
+  color: var(--text-light);
+}
+
+.about__content p:nth-child(3) {
+  margin-bottom: 2rem;
+}
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .about__container {
+      flex-direction: column; /* تغيير توجيه العناصر عندما يكون عرض الشاشة أصغر من 767 بكسل */
+    }
+  
+    .about__image::before {
+      width: 100%; /* جعل عنصر الخلفية يمتد على عرض الشاشة بالكامل */
+      transform: translate(-50%, -50%); /* تعديل موقع العنصر */
+    }
+  
+    .about__image img {
+      max-width: 100%; /* جعل حجم الصورة يمتد لكامل عرض الشاشة */
+    }
+  
+    .about__content .section__header::before {
+      font-size: 3rem; /* تعديل حجم العنوان عندما يكون عرض الشاشة أصغر من 767 بكسل */
+    }
+
+    body {
+  font-family: 'Poppins', sans-serif; /* تحديد نوع الخط الرئيسي */
+  color: var(--text-dark); /* لون النص الرئيسي */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* تحديد سمك الخط لعناوين الصفحة */
+  
+}
+
+p {
+  line-height: 1.5; /* تحديد ارتفاع السطر للفقرات */
+}
+
+.section__header {
+  font-size: 2rem; /* حجم الخط لعناوين الأقسام */
+  line-height: 2.75rem; /* ارتفاع السطر لعناوين الأقسام */
+}
+
+.btn {
+  font-size: 1rem; /* حجم الخط للأزرار */
+}
+
+.nav__links a {
+  color: var(--text-dark); /* لون النص لروابط القائمة */
+}
+
+.about__content .section__header::before {
+  font-size: 4rem; /* حجم الخط للعنوان "About Us" */
+  font-weight: 800; /* سمك الخط للعنوان */
+}
+
+.about__content p {
+  color: var(--text-dark); /* لون النص للفقرات في قسم About Us */
+  font-size: 15px;
+}
+.about__content .section__header::before {
+  content: "About Us";
+  font-size: 40px;
+}
+
+.about__content .section__header{
+font-size: 20px;
+}
+
+  }
+  
